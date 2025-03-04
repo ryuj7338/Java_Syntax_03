@@ -1,6 +1,6 @@
 package org.example;
 
-// 문제 : a와 b가 가지고 있는 값을 서로 뒤바꿔주세요.
+// 문제 : a와 b가 가지고 있는 값을 서로 뒤바꿔주세요. // 조건 : 숫자와 사칙연산 사용 금지
 
 class Main {
     public static void main(String[] args) {
@@ -20,8 +20,9 @@ class Main {
         System.out.println("b : " + b);
 
         // 여기서 부터
-        a = 10;
-        b = 5;
+        int c = a;
+        a = b;
+        b = c;
         // 여기까지 수정 가능
 
         System.out.println("a : " + a);
