@@ -1,76 +1,66 @@
 package org.example;
 
-// 문제 : 실행되는 출력문에는 참 그렇지 않으면 거짓 이라고 적어주세요.
+// 문제 : 할인 대상인지 아닌지 출력해주세요.
+// 조건 : 나이가 19세 이하이거나 60세 이상이면 할인 대상입니다.
+// 조건 : 출력예시 처럼 출력되어야 합니다.
+// 조건 : `구현시작` 부분만 수정 할 수 있습니다.
+// 조건 : 4가지 이상의 방법으로 풀어야 합니다.
+// 조건 : 그 중 2가지 방법은 `&&, ||`없이 풀어야 합니다.
 
 class Main {
     public static void main(String[] args) {
-        if ( true ) {
-            System.out.println("참1");
+        int age = 20; // 이 값을 바꿔가면서 실행해보세요.
+
+        System.out.println("당신의 나이는 " + age + "살 입니다.");
+
+        // 구현시작
+        System.out.println("== 정답 v1 ==");
+        if ( age <= 19 ) {
+            System.out.println("할인 대상입니다.");
         }
 
-        if ( false ) {
-            System.out.println("거짓1");
+        if ( age >= 60 ) {
+            System.out.println("할인 대상입니다.");
         }
 
-        int a = 10;
-
-        // `==` => 같다.
-        if ( a == 10 ) {
-            System.out.println("참2");
+        if ( age >= 20 ) {
+            if ( age < 60 ) {
+                System.out.println("할인 대상이 아닙니다.");
+            }
         }
 
-        // `!=` => 같지 않다.
-        if ( a != 10 ) {
-            System.out.println("거짓2");
+        System.out.println("== 정답 v2 ==");
+
+        // if 문들을 else 로 묶어서 하나로 만들 수 있다.
+        // 마지막에는 else 를 쓰고 조건을 안쓰면 위의 모든 조건이 틀렸을 때 실행되는 블록을 만들 수 있다.
+        if ( age <= 19 ) {
+            System.out.println("할인 대상입니다.");
+        }
+        else if ( age >= 60 ) {
+            System.out.println("할인 대상입니다.");
+        }
+        else {
+            System.out.println("할인 대상이 아닙니다.");
         }
 
-        if ( a > 10 ) {
-            System.out.println("거짓3");
+        System.out.println("== 정답 v3 ==");
+
+        if ( age <= 19 || age >= 60 ) {
+            System.out.println("할인 대상입니다.");
+        }
+        else {
+            System.out.println("할인 대상이 아닙니다.");
         }
 
-        if ( a >= 10 ) {
-            System.out.println("참3");
+        System.out.println("== 정답 v4 ==");
+
+        if ( age > 19 && age < 60 ) {
+            System.out.println("할인 대상이 아닙니다.");
+        }
+        else {
+            System.out.println("할인 대상입니다.");
         }
 
-        int b = 10;
-
-        if ( a == b ) {
-            System.out.println("참4");
-        }
-
-        // boolean c => c 에는 오직 true/false 만 담을 수 있다.
-        boolean c = a != b;
-
-        if ( c ) {
-            System.out.println("거짓4");
-        }
-
-        if ( c == false ) {
-            System.out.println("참5");
-        }
-
-        // `!` => 반전
-        if ( !c ) {
-            System.out.println("참6");
-        }
-
-        // `!` => 반전
-        if ( !(!c) ) {
-            System.out.println("거짓5");
-        }
-
-        boolean d = true;
-
-        if ( c != d ) {
-            System.out.println("참7");
-        }
-
-        if ( 20 > 2 && 10 > 3 && true != false && 10 != 10 ) {
-            System.out.println("거짓6");
-        }
-
-        if ( 10 != 10 || 10 < 2 ) {
-            System.out.println("거짓7");
-        }
+        // 출력 => 할인대상입니다. 또는 할인 대상이 아닙니다.
     }
 }
