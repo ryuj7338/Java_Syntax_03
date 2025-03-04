@@ -1,66 +1,64 @@
 package org.example;
 
-// 문제 : 할인 대상인지 아닌지 출력해주세요.
-// 조건 : 나이가 19세 이하이거나 60세 이상이면 할인 대상입니다.
-// 조건 : 출력예시 처럼 출력되어야 합니다.
-// 조건 : `구현시작` 부분만 수정 할 수 있습니다.
-// 조건 : 4가지 이상의 방법으로 풀어야 합니다.
-// 조건 : 그 중 2가지 방법은 `&&, ||`없이 풀어야 합니다.
+//// 문제 : 아래와 같이 출력해주세요.
+//
+//class Main {
+//    public static void main(String[] args) {
+//        System.out.println("8 * 1 = 8");
+//        System.out.println("8 * 2 = 16");
+//        System.out.println("8 * 3 = 24");
+//        System.out.println("8 * 4 = 32");
+//        System.out.println("8 * 5 = 40");
+//        System.out.println("8 * 6 = 48");
+//        System.out.println("8 * 7 = 56");
+//        System.out.println("8 * 8 = 64");
+//        System.out.println("8 * 9 = 72");
+//
+//        // 출력
+//    /*
+//    8 * 1 = 8
+//    8 * 2 = 16
+//    8 * 3 = 24
+//    8 * 4 = 32
+//    8 * 5 = 40
+//    8 * 6 = 48
+//    8 * 7 = 56
+//    8 * 8 = 64
+//    8 * 9 = 72
+//    */
+//    }
+//}
+
+
+
+// 문제 : 아래와 같이 출력해주세요.
+// 문제 : dan 변수의 값에 따라 첫번째로 곱하는 수가 변하게 해주세요.
 
 class Main {
     public static void main(String[] args) {
-        int age = 20; // 이 값을 바꿔가면서 실행해보세요.
+        int dan = 8;
 
-        System.out.println("당신의 나이는 " + age + "살 입니다.");
+        System.out.println(dan+" * 1 = 8");
+        System.out.println(dan+" * 2 = 16");
+        System.out.println(dan+" * 3 = 24");
+        System.out.println(dan+" * 4 = 32");
+        System.out.println(dan+" * 5 = 40");
+        System.out.println(dan+" * 6 = 48");
+        System.out.println(dan+" * 7 = 56");
+        System.out.println(dan+" * 8 = 64");
+        System.out.println(dan+" * 9 = 72");
 
-        // 구현시작
-        System.out.println("== 정답 v1 ==");
-        if ( age <= 19 ) {
-            System.out.println("할인 대상입니다.");
-        }
-
-        if ( age >= 60 ) {
-            System.out.println("할인 대상입니다.");
-        }
-
-        if ( age >= 20 ) {
-            if ( age < 60 ) {
-                System.out.println("할인 대상이 아닙니다.");
-            }
-        }
-
-        System.out.println("== 정답 v2 ==");
-
-        // if 문들을 else 로 묶어서 하나로 만들 수 있다.
-        // 마지막에는 else 를 쓰고 조건을 안쓰면 위의 모든 조건이 틀렸을 때 실행되는 블록을 만들 수 있다.
-        if ( age <= 19 ) {
-            System.out.println("할인 대상입니다.");
-        }
-        else if ( age >= 60 ) {
-            System.out.println("할인 대상입니다.");
-        }
-        else {
-            System.out.println("할인 대상이 아닙니다.");
-        }
-
-        System.out.println("== 정답 v3 ==");
-
-        if ( age <= 19 || age >= 60 ) {
-            System.out.println("할인 대상입니다.");
-        }
-        else {
-            System.out.println("할인 대상이 아닙니다.");
-        }
-
-        System.out.println("== 정답 v4 ==");
-
-        if ( age > 19 && age < 60 ) {
-            System.out.println("할인 대상이 아닙니다.");
-        }
-        else {
-            System.out.println("할인 대상입니다.");
-        }
-
-        // 출력 => 할인대상입니다. 또는 할인 대상이 아닙니다.
+        // 출력
+    /*
+    8 * 1 = 8
+    8 * 2 = 16
+    8 * 3 = 24
+    8 * 4 = 32
+    8 * 5 = 40
+    8 * 6 = 48
+    8 * 7 = 56
+    8 * 8 = 64
+    8 * 9 = 72
+    */
     }
 }
