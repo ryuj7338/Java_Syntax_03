@@ -8,15 +8,9 @@ public class Main {
 
         Scanner sc= new Scanner(System.in);   // 입력
 
-        int A, B;
-        A = sc.nextInt();
-        B = sc.nextInt();
+       String id = sc.next();
 
-        System.out.println(A+B);
-        System.out.println(A-B);
-        System.out.println(A*B);
-        System.out.println(A/B);
-        System.out.println(A%B);
+        System.out.println(id + "??!");
     }
 }
 
