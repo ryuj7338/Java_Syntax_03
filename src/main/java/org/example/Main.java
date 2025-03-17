@@ -8,15 +8,15 @@ public class Main {
 
         Scanner sc= new Scanner(System.in);   // 입력
 
-       int A = sc.nextInt();    // 5
-       int B = sc.nextInt();    // 8
-       int C = sc.nextInt();    // 4
+       int A = sc.nextInt();    // 472
+       int B = sc.nextInt();    // 385
 
-
-        System.out.println((A+B)%C);
-        System.out.println( ((A%C) + (B%C))%C);
-        System.out.println((A*B)%C);
-        System.out.println(((A%C) * (B%C))%C);
+        // % - 나머지
+        // / - 몫
+        System.out.println(A *(B%10));
+        System.out.println(A *((B%100)/10));
+        System.out.println(A * (B/100));
+        System.out.println(A * B);
     }
 }
 
