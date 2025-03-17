@@ -8,9 +8,9 @@ public class Main {
 
         Scanner sc= new Scanner(System.in);   // 입력
 
-       String id = sc.next();
+       int y = sc.nextInt();
 
-        System.out.println(id + "??!");
+        System.out.println(y - 543);
     }
 }
 
