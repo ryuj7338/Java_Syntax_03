@@ -13,7 +13,7 @@ public class Main {
             B = sc.nextInt();
 
 
-            System.out.println(A+B);
+            System.out.println(A-B);
         }
     }
 
