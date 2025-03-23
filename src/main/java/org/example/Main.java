@@ -7,12 +7,21 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int year = sc.nextInt();
+        int x = sc.nextInt();
+        int y = sc.nextInt();
 
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println("1");
-        }else {
-            System.out.println("0");
+        if (x >0 && y > 0) {
+            System.out.println(1);
         }
+        if (x < 0 && y > 0){
+            System.out.println(2);
+        }
+        if (x < 0 && y < 0) {
+            System.out.println(3);
+        }
+        if(x> 0 && y < 0){
+            System.out.println(4);
+        }
+
     }
 }
