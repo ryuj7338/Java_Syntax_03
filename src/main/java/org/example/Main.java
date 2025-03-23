@@ -7,10 +7,15 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
+        int T = sc.nextInt();
+        int arr[] = new int[T];
 
-        for (int i = 1; i <=9; i++) {
-            System.out.println(a + " * " + i + " = " +(a * i));
+        for (int i = 1; i < T; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+
+            arr[i -1] = a + b;
+            System.out.println(arr[i-1]);
         }
 
     }
