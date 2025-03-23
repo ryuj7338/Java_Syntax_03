@@ -7,27 +7,28 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        String[] numbers = sc.nextLine().split(" ");
+        int A;
 
-        int A = Integer.parseInt(numbers[0]);
-        int B = Integer.parseInt(numbers[1]);
+        A = sc.nextInt();
 
-//        int A, B;
-//
-//        A = sc.nextInt();
-//        B = sc.nextInt();
 
-        if (A > B) {
-            System.out.print(">");
-        }else if (A < B) {
-            System.out.print("<");
-        }else if (A == B) {
-            System.out.print("==");
+        if(A>= 90) {
+            System.out.println("A");
         }
-
+        else if (A >= 80) {
+            System.out.println("B");
+        }
+        else if (A >= 70) {
+            System.out.println("C");
+        }
+        else if (A >= 60){
+            System.out.println("D");
+        }
+        else {
+            System.out.println("F");
+        }
     }
 }
-
 
 
 
