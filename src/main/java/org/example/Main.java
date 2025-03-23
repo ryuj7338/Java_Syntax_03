@@ -7,22 +7,30 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int H = sc.nextInt();
-        int M = sc.nextInt();
-        int C = sc.nextInt();
+       String[] dice = sc.nextLine().split(" ");
+       int a = Integer.parseInt(dice[0]);
+       int b = Integer.parseInt(dice[1]);
+       int c = Integer.parseInt(dice[2]);
 
-        M = M + C;
+       if (a == b && b == c) {
+           System.out.println(10000 + a * 1000);
+       }
+       else if ( a == b && b != c || a != b && a == c) {
+           System.out.println(1000 + a * 100);
+       }else if (a != b && b == c) {
+           System.out.println(1000 + b * 100);
+       }else if (a != b && b != c) {
+           if (a > b && a > c) {
+               System.out.println(a * 100);
+           }
+           if (a < b && b > c) {
+               System.out.println(b * 100);
+           }
+           if (a < c && b < c) {
+               System.out.println(c * 100);
+           }
 
-        if (M >= 60) {
-            H = H + M / 60;
-            M = M % 60;
-
-        }
-        if (H >= 24) {
-            H = H - 24;
-        }
-        System.out.println(H + " " + M);
-
+       }
 
     }
 }
