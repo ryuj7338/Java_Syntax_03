@@ -7,38 +7,12 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int A;
+        int year = sc.nextInt();
 
-        A = sc.nextInt();
-
-
-        if(A>= 90) {
-            System.out.println("A");
-        }
-        else if (A >= 80) {
-            System.out.println("B");
-        }
-        else if (A >= 70) {
-            System.out.println("C");
-        }
-        else if (A >= 60){
-            System.out.println("D");
-        }
-        else {
-            System.out.println("F");
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("1");
+        }else {
+            System.out.println("0");
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
