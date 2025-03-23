@@ -7,20 +7,21 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+        int H = sc.nextInt();
+        int M = sc.nextInt();
 
-        if (x >0 && y > 0) {
-            System.out.println(1);
+
+        if (M < 45) {
+            H--;
+            M = 60 - (45 - M);
+           if (H < 0) {
+               H = 23;
+           }
+            System.out.println(H + " " + M);
         }
-        if (x < 0 && y > 0){
-            System.out.println(2);
-        }
-        if (x < 0 && y < 0) {
-            System.out.println(3);
-        }
-        if(x> 0 && y < 0){
-            System.out.println(4);
+        else {
+            M = M - 45;
+            System.out.println(H+ " " + M);
         }
 
     }
