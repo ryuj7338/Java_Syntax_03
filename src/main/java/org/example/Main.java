@@ -9,20 +9,20 @@ public class Main {
 
         int H = sc.nextInt();
         int M = sc.nextInt();
+        int C = sc.nextInt();
 
+        M = M + C;
 
-        if (M < 45) {
-            H--;
-            M = 60 - (45 - M);
-           if (H < 0) {
-               H = 23;
-           }
-            System.out.println(H + " " + M);
+        if (M >= 60) {
+            H = H + M / 60;
+            M = M % 60;
+
         }
-        else {
-            M = M - 45;
-            System.out.println(H+ " " + M);
+        if (H >= 24) {
+            H = H - 24;
         }
+        System.out.println(H + " " + M);
+
 
     }
 }
