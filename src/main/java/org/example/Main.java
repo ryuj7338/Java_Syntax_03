@@ -7,23 +7,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int H = sc.nextInt();
-        int M = sc.nextInt();
-        int C = sc.nextInt();
+        int a = sc.nextInt();
 
-        M = M + C;
-
-        if (M >= 60) {
-            H = H + M / 60;
-            M = M % 60;
-            if (H >= 24) {
-                H = H - 24;
-            }
-
+        for (int i = 1; i <=9; i++) {
+            System.out.println(a + " * " + i + " = " +(a * i));
         }
-
-        System.out.println(H + " " + M);
-
 
     }
 }
